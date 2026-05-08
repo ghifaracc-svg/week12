@@ -1,22 +1,40 @@
+import java.util.Scanner;
+
 public class SLLMain18 {
     public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
         SingleLinkedList18 sll = new SingleLinkedList18();
 
-        Student18 std1 = new Student18("001", "Student 1", "TI-1I", 3.89);
-        Student18 std2 = new Student18("002", "Student 2", "TI-1I", 3.45);
-        Student18 std3 = new Student18("003", "Student 3", "TI-1I", 3.20);
-        Student18 std4 = new Student18("004", "Student 4", "TI-1I", 3.00);
+        System.out.print("Input number of students: ");
+        int n = sc.nextInt();
+        sc.nextLine();
 
+        for (int i = 1; i <= n; i++) {
+
+            System.out.println("\nStudent Data " + i);
+
+            System.out.print("NIM        : ");
+            String nim = sc.nextLine();
+
+            System.out.print("Name       : ");
+            String name = sc.nextLine();
+
+            System.out.print("Class Name : ");
+            String className = sc.nextLine();
+
+            System.out.print("GPA        : ");
+            double gpa = sc.nextDouble();
+            sc.nextLine();
+
+            Student18 std = new Student18(nim, name, className, gpa);
+
+            sll.addLast(std);
+        }
+
+        System.out.println("\nLinked List Result:");
         sll.print();
 
-        sll.addFirst(std4);
-        sll.print();
-
-        sll.addLast(std1);
-        sll.print();
-
-        sll.insertAfter(std3, "Student 4");
-        sll.insertAt(2, std2);
-        sll.print();
+        sc.close();
     }
 }
