@@ -1,5 +1,3 @@
-package week12;
-
 public class SingleLinkedList18 {
     Node18 head;
     Node18 tail;
