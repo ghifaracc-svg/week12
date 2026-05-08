@@ -35,6 +35,20 @@ public class SLLMain18 {
         System.out.println("\nLinked List Result:");
         sll.print();
 
+        System.out.println("\nData at index 1 is:");
+        Student18 data = sll.getData(1);
+        data.print();
+
+        int idx = sll.indexOf("Student 1");
+        System.out.println("Student 1 is located at index: " + idx);
+
+        sll.removeFirst();
+        sll.removeLast();
+        sll.print();
+
+        sll.removeAt(0);
+        sll.print();
+
         sc.close();
     }
 }
