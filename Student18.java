@@ -1,5 +1,3 @@
-package week12;
-
 public class Student18 {
     String nim, name, className;
     double gpa;
